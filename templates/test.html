@@ -9,7 +9,17 @@
 </style>
 {% endblock %}
 {% block content %}
-<h1>Hello {{name}}!</h1>
-<p class="important">
+<h1 class="text-4xl font-serif text-center text-blue-400">Hello {{name}}!</h1>
+<p class="text-4xl font-serif text-center text-blue-400">
     Welcome on my awesome homepage.
-    {% endblock %}
+</p>
+{% endblock %}
+
+<ul class=" list-reset flex flex-col">
+{% block list %}
+{%for i in range(0, len)%}
+<li class="rounded-t relative -mb-px block border p-4 border-grey">{{fruits[i]}}</li>
+{%endfor%}
+
+{% endblock %}
+</ul>
