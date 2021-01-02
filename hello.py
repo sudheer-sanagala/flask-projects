@@ -5,7 +5,7 @@ app = Flask(__name__)
 movies = {1: 'Toy story', 2: 'The Raid', 3: 'Hero',
             4: 'Ip Man', 5: 'Kung Fu Panda'}
 
-fruits = ['apples','banana','grapes','oranges']
+fruits = ['apples','banana','grapes','oranges','mango']
 
 @app.route("/check")
 def check():
