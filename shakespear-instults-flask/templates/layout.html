@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Define a viewport for Bootstrap's responsive rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - My Flask Application</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/base.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/components.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.5/dist/utilities.min.css" />    
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <!-- Navbar omitted -->
+
+    <div class="container body-content">
+        <!-- "content" block that pages are expected to override -->
+        {% block content %}{% endblock %}
+        <hr />
+        <footer class="w-full text-center border-t border-grey p-4 pin-b">
+            <p><a href="https://github.com/sudheer-sanagala" target="_blank" rel="noopener noreferrer">Made with Python Flask and 💚 by
+                Sudheer-Sanagala</a></p>
+        </footer>
+    </div>
+
+    <!-- Additional scripts; use the "scripts" block to add page-specific scripts.  -->
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>
